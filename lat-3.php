@@ -1,18 +1,18 @@
 <?php
 /* test palindrom */
+echo "test palindrom <br/>";
 
-//$kalimat = 'Kasur ini rusak';
-$kalimat = 'Makan sate kambing';
+$kalimat[] = 'Kasur ini rusak';
+$kalimat[] = 'Makan sate kambing';
+$kalimat[] = 'Ira hamil lima hari';
+$kalimat[] = 'Ibu Ratna antar ubi';
 
-$cleanSentence = strtolower(str_replace(' ','',$kalimat));
-$reverse_kalimat = strrev($cleanSentence);
-
-echo "\$cleanSentence : $cleanSentence <br/>";
-echo "\$reverse_kalimat : $reverse_kalimat <br/>";
-
-$palindrom = $cleanSentence == $reverse_kalimat ? 'true': 'false';
-
-echo "is $kalimat palindrom: $palindrom";
-
+foreach ($kalimat as $key => $value) {
+    $cleanSentence = strtolower(str_replace(' ','',$value));
+    $reverse_kalimat = strrev($cleanSentence);
+    $status = $cleanSentence == $reverse_kalimat ? 'true': 'false';
+    echo "$value : " . $status . "<br />";
+    //$result[] = [$value => $status];
+}
 
 ?>
