@@ -11,8 +11,10 @@ foreach ($kalimat as $key => $value) {
     $cleanSentence = strtolower(str_replace(' ','',$value));
     $reverse_kalimat = strrev($cleanSentence);
     $status = $cleanSentence == $reverse_kalimat ? 'true': 'false';
-    echo "$value : " . $status . "<br />";
-    //$result[] = [$value => $status];
+    $hasil[] = "$value : $status" ;
 }
 
+foreach($hasil as $key => $value) {
+    echo "$value <br/>";
+}
 ?>
